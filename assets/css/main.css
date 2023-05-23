@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Avalon;
+  src: url("../fonts/Avalon.ttf");
+}
+
+html {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Avalon";
+  margin: auto;
+}
+
+.logo {
+  position: relative;
+  width: 20%;
+  top: 22rem;
+  left: 40%;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10rem;
+  margin-block: 14rem;
+}
+.customizer-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.umbrella-preview {
+  width: 30rem;
+  height: 30rem;
+  background-image: url("../images/Blue_umbrella.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.umbrella-loader {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../images/icons/loader_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 45%;
+  bottom: 18.1rem;
+  visibility: hidden;
+  animation: spin 2s linear infinite;
+}
+
+.color-switch-bar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.blue-switch,
+.pink-switch,
+.yellow-switch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  opacity: 0.4;
+  border: 0;
+}
+.blue-switch:hover,
+.pink-switch:hover,
+.yellow-switch:hover {
+  opacity: 1;
+}
+.blue-switch:active,
+.pink-switch:active,
+.yellow-switch:active {
+  transform: scale(0.98);
+  opacity: 1;
+  border: 1px solid black;
+}
+
+.header-and-color-content,
+.upload-content {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+}
+.upload-button {
+  height: 3rem;
+  font-weight: bolder;
+  background-color: #00a3e0;
+  background-image: url("../images/icons/upload_icon.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2rem;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-size: medium;
+  font-family: "Avalon";
+}
+.upload-button:hover {
+  box-shadow: 0 5px 10px #888888;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
